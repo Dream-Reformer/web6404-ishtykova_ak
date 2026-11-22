@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Робин Гуд — Предложить фильм</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="site-header__brand" href="index.html">Легенда о Робин Гуде</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <a class="site-nav__link" href="index.html">Главная</a>
+                <a class="site-nav__link" href="adaptations.html">Экранизации</a>
+                <a class="site-nav__link" href="table.html">Таблица фильмов</a>
+                <a class="site-nav__link" href="recommendation.html" aria-current="page">Предложить фильм</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page">
+        <h1>Предложить фильм</h1>
+        <p>Знаете экранизацию, которую стоит добавить в подборку?</p>
+        <div class="recommendation">
+            <form class="film-form" id="film-form" method="post">
+                <label class="film-form__field">
+                    Ваше имя
+                    <input class="film-form__input" type="text" name="visitorName" required>
+                </label>
+                <label class="film-form__field">
+                    Название фильма
+                    <input class="film-form__input" type="text" name="filmTitle" required>
+                </label>
+                <label class="film-form__field">
+                    Год выхода
+                    <input class="film-form__input" type="number" name="releaseYear" min="1900" max="2100" required>
+                </label>
+                <label class="film-form__field film-form__field_inline">
+                    <input type="checkbox" name="hasWatched">
+                    Я уже смотрел этот фильм
+                </label>
+                <button class="button" type="submit">Отправить рекомендацию</button>
+                <p class="film-form__status" id="film-status" role="status"></p>
+            </form>
+            <div class="recommendation__picture">
+                <img class="recommendation__image" src="image/robin-and-little-john.png" width="736" height="920" alt="">
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
