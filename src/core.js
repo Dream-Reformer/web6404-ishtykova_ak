@@ -34,7 +34,7 @@ function sumTo(n) {
  * @param {*} n
  */
 function recSumTo(n) {
-    if (n === 1) return 1;
+    if (n <= 1) return 1;
     return n + recSumTo(n - 1);
 }
 
@@ -43,7 +43,7 @@ function recSumTo(n) {
  * @param {*} n
  */
 function factorial(n) {
-    if (n === 0 || n === 1) return 1;
+    if (n <= 1) return 1;
     return n * factorial(n - 1);
 }
 
